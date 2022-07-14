@@ -26,7 +26,7 @@ test('searching the field',()=>{
   expect(input.value).toBe('tamil');
 })
 
-test('category buttons',async()=>{
+test('category button',async()=>{
   const store=mockStore();
   render(<Provider store={store} >
   <Search  Selected={mockselected} search={mockSearch} loading={mockloading}/>

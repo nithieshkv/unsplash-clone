@@ -3,12 +3,13 @@
   padding: 0px;
   box-sizing: border-box;
 }
-body{
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .left-container {
   display: flex;
-  min-width:60%;
+  min-width: 60%;
   flex-wrap: wrap;
   margin: 10px auto;
   column-gap: 20px;
@@ -19,159 +20,151 @@ body{
   display: grid;
   grid-template-columns: 2fr 2fr;
   width: 100%;
-  grid-gap:2rem;
-  margin:auto;
+  grid-gap: 2rem;
+  margin: auto;
 }
 .image-description {
   max-width: 85%;
-
 }
 .image-container {
   width: 250px;
   height: 150px;
-  position:relative;
-  cursor:pointer;
+  position: relative;
+  cursor: pointer;
 }
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius:3px;
-  box-shadow: rgba(0, 0, 0, 0.10) 0px 3px 6px, rgba(0, 0, 0, 0.15) 0px 3px 6px;
-    /* position: relative; */
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 6px, rgba(0, 0, 0, 0.15) 0px 3px 6px;
+  /* position: relative; */
 }
-.image-container:hover{
-  transform:scale(1.06)
-
-
-  
+.image-container:hover {
+  transform: scale(1.06);
 }
 .like {
   position: absolute;
   top: 0;
   left: 0;
-  opacity:0;
+  opacity: 0;
   display: flex;
-  justify-content:center;
-  width:100%;
-  margin-top:auto;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
   align-items: center;
   align-content: center;
-  height:100%;
+  height: 100%;
 }
 
 .like:hover {
   /* display: flex; */
   opacity: 0.8;
-  background-color: rgb(228, 235, 238);;
+  background-color: rgb(228, 235, 238);
   border: none;
   /* z-index: 100; */
 }
-.like-icon{
-  display:flex;
+.like-icon {
+  display: flex;
+}
+.image-decription-card h1 {
+  text-align: center;
+  padding: 5px;
+}
 
+.like-icon:hover {
+  transform: scale(1.09);
 }
-.image-decription-card h1{
-text-align: center;
-padding:5px;
+.like-icon p {
+  padding: 3px;
+  font-weight: bold;
 }
-
-.like-icon:hover{
-transform:scale(1.09);
+.like {
+  color: red;
 }
-.like-icon p{
-  padding:3px;
-  font-weight:bold;
+.like button {
+  border: none;
 }
-.like{
-  color:red;
-
-}
-.like button{
-  border:none;
-}
-.like-icon p{
-  font-size:16px;
-}
-.image-description{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-}
-.fullimage img{
-  padding:13px;
-  width:100%;
-  height:100%;
-  border-radius:5px;
-}
-.image-decription-card{
+.like-icon p {
   font-size: 16px;
-  font-weight:500;
-  margin:3%;
-  background-color:beige;
-  padding:3%;
 }
-.image-decription-card p{
+.image-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.fullimage img {
+  padding: 13px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.image-decription-card {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3%;
+  background-color: beige;
+  padding: 3%;
+}
+.image-decription-card p {
   text-align: justify;
-  padding:7px;
-  ;
+  padding: 7px;
 }
-.next-button{
-  display:flex;
+.next-button {
+  display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   justify-content: center;
-  margin:auto;
+  margin: auto;
 }
-.next{
-  width:130px;
+.next {
+  width: 130px;
 }
-.loader{
+.loader {
   display: flex;
   justify-content: center;
- margin: 10% 0%;
+  margin: 10% 0%;
 }
-.img-like{
+.img-like {
   position: absolute;
   top: 0;
   left: 0;
-  opacity:0;
+  opacity: 0;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   /* width:100%; */
-  margin-top:auto;
+  margin-top: auto;
   align-items: center;
   align-content: center;
-  height:100%;
+  height: 100%;
 }
-.fullimage{
-  position:relative;
-  
+.fullimage {
+  position: relative;
 }
-.pagenotfound{
-  color:black;
+.pagenotfound {
+  color: black;
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height:100vh;
-  align-items:center;
-  align-content:center;
+  min-height: 100vh;
+  align-items: center;
+  align-content: center;
   background-color: aqua;
 }
-@media  screen and (max-width:500px) {
-  .container{
-      display:block;
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
   }
-  .fullimage img{
-    margin:20% 0px;;
+  .fullimage img {
+    margin: 20% 0px;
     /* width:80%; */
   }
-.next-buton{
-  display:block;
-}
-.description{
-  width:85%;
-  margin:50px;;
-}
+  .next-buton {
+    display: block;
+  }
+  .description {
+    width: 85%;
+    margin: 50px;
+  }
 }

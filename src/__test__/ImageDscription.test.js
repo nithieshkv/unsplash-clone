@@ -146,6 +146,6 @@ test("image description", () => {
     </Provider>
     
   );
-  const element=screen.findByText(/BIO/i)
+  const element=screen.findByText(/DESCRIPTION/i)
   expect(element).toBeInTheDocument(); 
 });

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {  GoogleLogout } from "react-google-login";
-import { useNavigate } from "react-router-dom";
 import { AccountCircleOutlined } from "@material-ui/icons";
 import SignIn from "./SignIn";
 import Gallery from "./Gallery";
@@ -11,7 +10,6 @@ const clientId =process.env.REACT_APP_CLIENT_ID
 
 
 function Login() {
-  const nav = useNavigate();
   const [profile, setProfile] = useState({});
   const [showloginButton, setShowloginButton] = useState(true);
   const [showlogoutButton, setShowlogoutButton] = useState(false);
@@ -46,15 +44,15 @@ function Login() {
         <div>
           {profile.name ? (
             <div className="header-left">
-              <img src={profile.imageUrl} alt="profile image" />
-              <p>Welcome {profile.name}</p>
+              <img src={profile.imageUrl} alt="profile picture" />
+              <p>Welcome, {profile.name}!</p>
             </div>
           ) : (
             <div className="header-left">
               <div className="profile-icon">
                 <AccountCircleOutlined fontSize="large" color="primary" />
               </div>
-              <p>Welcome Guest Please Signin</p>
+              <p>Welcome, Guest Please Signin!</p>
             </div>
           )}
         </div>

@@ -5,6 +5,8 @@ import { FavoriteBorder, FavoriteOutlined } from "@material-ui/icons";
 import ImageDescription from "./ImageDescription";
 import { nextPage } from "../actionTypes";
 import loader from "../images/loader.gif";
+import Skeleton from '@mui/material/Skeleton';
+
 import '../main.css'
 
 const ImageList = ({
@@ -33,7 +35,7 @@ const ImageList = ({
     Selected({});
   }, [searchValue, categoryValue]);
   useEffect(() => {
-    loading();
+    // loading();
 
     data({ search: searchValue, category: categoryValue, next: nextPage });
     Selected({})
@@ -48,7 +50,7 @@ const ImageList = ({
     setLiked(array);
   }, [imagelist]);
 
-  const displayImages = imagelist?.map((x, index) => {
+  const displayImages = imagelist?imagelist.map((x, index) => {
     return (
       <div key={index}>
         <div onClick={() => {Selected(x)
@@ -87,7 +89,8 @@ const ImageList = ({
         </div>
       </div>
     );
-  });
+  }):    <Skeleton variant="rectangular" width={210} height={118} />
+
   return (
     <div>
       {loader?<div className="loader">
