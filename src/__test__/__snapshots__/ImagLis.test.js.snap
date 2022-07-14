@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className=""
+  >
+    <div
+      className="left-container"
+    >
+      <span
+        className="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+        style={
+          Object {
+            "height": 118,
+            "width": 210,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="next-button"
+  >
+    <button
+      className="buttons next"
+      onClick={[Function]}
+    >
+      NEXT PAGE
+    </button>
+  </div>
+</div>
+`;

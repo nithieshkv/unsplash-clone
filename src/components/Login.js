@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {  GoogleLogout } from "react-google-login";
+import { GoogleLogout } from "react-google-login";
 import { AccountCircleOutlined } from "@material-ui/icons";
 import SignIn from "./SignIn";
 import Gallery from "./Gallery";
 import "./Header.css";
 // import Gallery from "../pages/Gallery";
 
-const clientId =process.env.REACT_APP_CLIENT_ID
-
+const clientId = process.env.REACT_APP_CLIENT_ID;
 
 function Login() {
   const [profile, setProfile] = useState({});
@@ -60,7 +59,7 @@ function Login() {
         <div>
           {showloginButton ? (
             <div className="button-home">
-<button className="about-button">About</button>
+              <button className="about-button">About</button>
             </div>
           ) : null}
 

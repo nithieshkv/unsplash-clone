@@ -1,9 +1,9 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
 import { useNavigate } from "react-router-dom";
-import image from '../images/image.jpg'
+import image from "../images/image.jpg";
 
-const clientId =process.env.REACT_APP_CLIENT_ID
+const clientId = process.env.REACT_APP_CLIENT_ID;
 const SignIn = ({ setProfile }) => {
   const nav = useNavigate();
   const onLoginSuccess = (res) => {
@@ -17,8 +17,8 @@ const SignIn = ({ setProfile }) => {
 
   return (
     <div className="contain">
-    <div className="background">
-      <img src={image} alt="image" />
+      <div className="background">
+        <img src={image} alt="image" />
       </div>
       <div className="bg-img">
         <GoogleLogin
@@ -29,7 +29,6 @@ const SignIn = ({ setProfile }) => {
           cookiePolicy={"single_host_origin"}
           isSignedIn={true}
         />
-        
       </div>
     </div>
   );

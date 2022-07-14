@@ -7,7 +7,7 @@ import {
   nextPage,
   Category,
   like,
-  loading
+  loading,
 } from "../actionTypes";
 const initialState = { data: [], loading: true, error: "" };
 const Fetch = (state = initialState, action) => {
@@ -15,20 +15,20 @@ const Fetch = (state = initialState, action) => {
     case Success:
       return { ...state, loading: false, data: action.payload };
     case Failure:
-      case loading:
-        return {loding:true}
+    case loading:
+      return { loading: true };
       return { ...state, loading: true, error: action.payload };
     default:
       return state;
   }
 };
-const initialSelected = { data: {} ,liked:false};
+const initialSelected = { data: {}, liked: false };
 const SelectedData = (state = initialSelected, action) => {
   switch (action.type) {
     case selectedImage:
-      return { ...state,data: action.payload };
-      case like:
-        return {...state,liked:action.payload}
+      return { ...state, data: action.payload };
+    case like:
+      return { ...state, liked: action.payload };
     default:
       return state;
   }
