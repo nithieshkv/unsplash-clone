@@ -1,0 +1,10 @@
+export const fetchImages='fetchImages'
+export const selectedImage="selectedimage"
+export const Search="Search"
+export const Success="success"
+export const Failure="failure";
+export const Error="error";
+export const nextPage="next";
+export const Category="category";
+export const like="like"
+export const loading="loading"
