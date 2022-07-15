@@ -22,7 +22,7 @@ it("renders correctly", () => {
   expect(tree).toMatchSnapshot();
 });
 
-test("sign-out", async () => {
+test("sign-out", () => {
   const store = mockStore();
   render(
     <Provider store={store}>
@@ -31,9 +31,9 @@ test("sign-out", async () => {
       </BrowserRouter>
     </Provider>
   );
-  const signout = screen.getByTestId("signin");
-  fireEvent.click(signout);
-  expect(signout).toBeTruthy();
+  const sign = screen.getByTestId("signin");
+  fireEvent.click(sign);
+  expect(sign).toBeTruthy();
 });
 
 test("profile names", async () => {
@@ -45,9 +45,29 @@ test("profile names", async () => {
       </BrowserRouter>
     </Provider>
   );
-  const profileTest = screen.getAllByTestId("profiletest");
-  const signin = screen.getByTestId("signin");
+  const profileTest = await screen.findByTestId("profiletest");
+  
+  const signin = await screen.findByTestId("signin");
   fireEvent.click(signin);
   fireEvent.change(profileTest);
   expect(profileTest).toBeTruthy();
 });
+
+test("button-text", async () => {
+  const store = mockStore();
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Login />
+      </BrowserRouter>
+    </Provider>
+  );
+  const buttontext = await screen.findByText(/Sign in with Google/i)
+  const profileTest = await screen.findByTestId("profiletest");
+
+  const signin = await screen.findByTestId("signin");
+  fireEvent.click(signin);
+  fireEvent.change(profileTest);
+  expect(profileTest).toBeTruthy();
+});
+

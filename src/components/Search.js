@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Fetch, Input, category, Loading, Selected } from "../actions";
 // import { loading } from "../actionTypes";
-
+import { useNavigate } from "react-router-dom";
 import "./Search.css";
 
 const Search = ({ search, searchValue, category, loading, selected }) => {
@@ -10,7 +10,10 @@ const Search = ({ search, searchValue, category, loading, selected }) => {
   const [inputValue, setInputValue] = useState("");
   const [toggle, setToggle] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("");
-
+const navigate=useNavigate();
+const userRequest=()=>{
+  setToggle(!toggle)
+}
   useEffect(() => {
     search({ search: inputValue, category: selectedCategory, next: 1 });
     loading();
@@ -18,7 +21,11 @@ const Search = ({ search, searchValue, category, loading, selected }) => {
 
     searchValue(inputValue);
   }, [toggle]);
-
+  let timer;
+useEffect(()=>{
+  timer=setTimeout(userRequest,5000)
+  return ()=>clearTimeout(timer)
+},[inputValue])
   const handler = (e) => {
     if (e.key === "Enter") {
       setToggle(!toggle);
@@ -35,6 +42,7 @@ const Search = ({ search, searchValue, category, loading, selected }) => {
             setSelectedCategory(x);
             setToggle(!toggle);
             category(x);
+            navigate(`/${x}`)
           }}
         >
           {x}

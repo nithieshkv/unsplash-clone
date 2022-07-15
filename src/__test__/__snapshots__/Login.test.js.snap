@@ -48,12 +48,13 @@ exports[`renders correctly 1`] = `
       className="background"
     >
       <img
-        alt="image"
+        alt="background"
         src="image.jpg"
       />
     </div>
     <div
       className="bg-img"
+      data-testid="signin"
     >
       <button
         disabled={true}

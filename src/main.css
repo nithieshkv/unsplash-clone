@@ -114,11 +114,11 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   margin: auto;
 }
 .next {
-  width: 130px;
+  width: 150px;
 }
 .loader {
   display: flex;

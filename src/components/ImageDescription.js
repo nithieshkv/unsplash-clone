@@ -5,7 +5,7 @@ const ImageDescription = ({ data, liked, like }) => {
   return (
     <div className="description">
       <div className="fullimage">
-        <img src={data.urls?.full} alt={data.alt_description} />
+        <img src={data.urls?.small} alt={data.alt_description} />
         <div className="image-like">
           <button>
             <div

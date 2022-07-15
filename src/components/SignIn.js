@@ -18,9 +18,8 @@ const SignIn = ({ setProfile }) => {
       <div className="background">
         <img src={image} alt="background" />
       </div>
-      <div className="bg-img">
+      <div className="bg-img" data-testid="signin">
         <GoogleLogin
-          data-testid="signin"
           clientId={clientId}
           buttonText="Sign In With Google"
           onSuccess={onLoginSuccess}

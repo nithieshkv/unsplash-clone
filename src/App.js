@@ -16,6 +16,11 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
+            <Route path="/latest" element={<Login />} />
+            <Route path="/oldest" element={<Login />} />
+
+            <Route path="/popularity" element={<Login />} />
+
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>

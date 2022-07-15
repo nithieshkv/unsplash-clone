@@ -112,6 +112,28 @@ const ImageList = ({
         </div>
       ) : (
         <>
+
+<div className="next-button">
+
+            {nextPage > 1 ? (
+              <button
+                onClick={() => next(nextPage - 1)}
+                className="buttons next"
+              >
+                PREVIOUS PAGE
+              </button>
+            ) : null}
+<button className="buttons next">
+    Current page is {nextPage}
+  </button>
+            <button
+              data-testid="next-test"
+              onClick={() => next(nextPage + 1)}
+              className="buttons next"
+            >
+              NEXT PAGE
+            </button>
+          </div>
           <div className={selectedImage?.id ? "container" : ""}>
             <div className="left-container">{displayImages}</div>
 
@@ -125,24 +147,7 @@ const ImageList = ({
               </div>
             ) : null}
           </div>
-          <div className="next-button">
-            {nextPage > 1 ? (
-              <button
-                onClick={() => next(nextPage - 1)}
-                className="buttons next"
-              >
-                PREVIOUS PAGE
-              </button>
-            ) : null}
-
-            <button
-              data-testid="next-test"
-              onClick={() => next(nextPage + 1)}
-              className="buttons next"
-            >
-              NEXT PAGE
-            </button>
-          </div>
+          
         </>
       )}
     </div>

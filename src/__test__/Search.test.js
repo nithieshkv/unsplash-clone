@@ -27,7 +27,7 @@ test("searching the field", () => {
   );
   const input = screen.getByPlaceholderText(/Search/i);
   fireEvent.change(input, { target: { value: "welcome" } });
-  expect(input.value).toBe("tamil");
+  expect(input.value).toBe("welcome");
 });
 
 test("category button", async () => {
@@ -73,6 +73,6 @@ test("toggling", async () => {
     </Provider>
   );
   const inputelement = screen.getByPlaceholderText(/Search/i);
-  fireEvent.keyPress(inputelement)
+  fireEvent.keyDown(inputelement, {key: 'Enter', code: 'Enter', charCode: 13})
   expect(inputelement).toBeTruthy();
 });
