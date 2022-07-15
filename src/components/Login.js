@@ -43,7 +43,7 @@ function Login() {
         <div>
           {profile.name ? (
             <div className="header-left">
-              <img src={profile.imageUrl} alt="profile picture" />
+              <img src={profile.imageUrl} alt="user dp" />
               <p>Welcome, {profile.name}!</p>
             </div>
           ) : (

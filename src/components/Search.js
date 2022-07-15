@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Fetch, Input, category, Loading, Selected } from "../actions";
-import { loading } from "../actionTypes";
+// import { loading } from "../actionTypes";
 
 import "./Search.css";
+
 const Search = ({ search, searchValue, category, loading, selected }) => {
   const categoryList = ["latest", "oldest", "popularity"];
   const [inputValue, setInputValue] = useState("");
@@ -17,6 +18,7 @@ const Search = ({ search, searchValue, category, loading, selected }) => {
 
     searchValue(inputValue);
   }, [toggle]);
+
   const handler = (e) => {
     if (e.key === "Enter") {
       setToggle(!toggle);

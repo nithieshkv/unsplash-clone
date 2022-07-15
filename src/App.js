@@ -4,7 +4,6 @@ import { applyMiddleware, createStore } from "redux";
 import { RootReducer } from "./reducers";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import thunk from "redux-thunk";
-import Search from "./components/Search";
 import Login from "./components/Login";
 import PageNotFound from "./components/PageNotFound";
 import ErrorBoundary from "./components/ErrorBoundary";

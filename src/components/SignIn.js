@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import image from "../images/image.jpg";
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
@@ -16,7 +16,7 @@ const SignIn = ({ setProfile }) => {
   return (
     <div className="contain">
       <div className="background">
-        <img src={image} alt="image" />
+        <img src={image} alt="background" />
       </div>
       <div className="bg-img">
         <GoogleLogin
