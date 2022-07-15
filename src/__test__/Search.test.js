@@ -26,7 +26,7 @@ test("searching the field", () => {
     </Provider>
   );
   const input = screen.getByPlaceholderText(/Search/i);
-  fireEvent.change(input, { target: { value: "tamil" } });
+  fireEvent.change(input, { target: { value: "welcome" } });
   expect(input.value).toBe("tamil");
 });
 
@@ -43,4 +43,36 @@ test("category button", async () => {
   );
   const button = screen.getByText("oldest");
   expect(button).toBeInTheDocument();
+});
+
+
+test("buttons", async () => {
+  const store = mockStore();
+  render(
+    <Provider store={store}>
+      <Search
+        Selected={mockselected}
+        search={mockSearch}
+        loading={mockloading}
+      />
+    </Provider>
+  );
+  const button = screen.getAllByTestId("button");
+  fireEvent.click(screen.getAllByTestId("button")[0])
+  expect(button).toBeTruthy();
+});
+test("toggling", async () => {
+  const store = mockStore();
+  render(
+    <Provider store={store}>
+      <Search
+        Selected={mockselected}
+        search={mockSearch}
+        loading={mockloading}
+      />
+    </Provider>
+  );
+  const inputelement = screen.getByPlaceholderText(/Search/i);
+  fireEvent.keyPress(inputelement)
+  expect(inputelement).toBeTruthy();
 });

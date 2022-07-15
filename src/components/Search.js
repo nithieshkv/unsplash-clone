@@ -27,6 +27,7 @@ const Search = ({ search, searchValue, category, loading, selected }) => {
     return (
       <div key={index}>
         <button
+          data-testid="button"
           className="buttons"
           onClick={(e) => {
             setSelectedCategory(x);

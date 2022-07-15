@@ -30,53 +30,52 @@
   margin: 10px;
 }
 
-.background img{
-  width:500px;;
-
+.background img {
+  width: 500px;
 }
-.button-home{
-  cursor:pointer;
-  margin:10px;
-    /* width:85px; */
-    background-color: darkblue;
-    color: white;
-    padding: 8px;
-    font-size: medium;
-    text-align:center;
-border:none;
-border-radius:4px;
+.button-home {
+  cursor: pointer;
+  margin: 10px;
+  /* width:85px; */
+  background-color: darkblue;
+  color: white;
+  padding: 8px;
+  font-size: medium;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
 }
-.about-button{
-  cursor:pointer;
+.about-button {
+  cursor: pointer;
 
-  color:white;
+  color: white;
   /* margin:15px; */
-    /* width:85px; */
-    background-color:darkblue;
-    padding: 7px;
-    font-size: medium;
-    text-align:center;
-border:none;
-border-radius:4px;
-
+  /* width:85px; */
+  background-color: darkblue;
+  padding: 7px;
+  font-size: medium;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
 }
-.contain{
-  display:flex;
+.contain {
+  display: flex;
   flex-direction: row;
-justify-content:center;
-align-items: center;
-align-content: center;
-min-height:80vh;
-align-content: center;;}
-@media screen and (max-width:768px){
-  .contain{
-    display:block;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 80vh;
+  align-content: center;
+}
+@media screen and (max-width: 768px) {
+  .contain {
+    display: block;
     /* margin:auto; */
-    width:75%;
+    width: 75%;
   }
-  .bg-img{
-    display:flex;
-    justify-content:center;
+  .bg-img {
+    display: flex;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 500px) {
@@ -84,24 +83,21 @@ align-content: center;;}
     display: none;
   }
   .bg-img {
-    
-    margin-left:45px;
-    margin-top:60px;
-    display:flex;
-    min-height:60vh;
-    justify-content:center;
-    align-items:flex-end;
+    margin-left: 45px;
+    margin-top: 60px;
+    display: flex;
+    min-height: 60vh;
+    justify-content: center;
+    align-items: flex-end;
     align-content: flex-end;
   }
-  .background img{
-    display:none;
+  .background img {
+    display: none;
   }
-  .contain{
-    background-image:url('../images/image.jpg');
+  .contain {
+    background-image: url("../images/image.jpg");
     background-repeat: no-repeat;
-    background-size:auto;
+    background-size: auto;
     width: 100%;
-  
   }
-  
 }

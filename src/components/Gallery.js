@@ -1,13 +1,13 @@
-import React from 'react'
-import ImageList from './ImageList'
-import Search from './Search'
+import React from "react";
+import ImageList from "./ImageList";
+import Search from "./Search";
 function Gallery() {
   return (
     <div>
-        <Search/>
-        <ImageList/>
+      <Search />
+      <ImageList />
     </div>
-  )
+  );
 }
 
-export default Gallery
+export default Gallery;

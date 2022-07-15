@@ -1,0 +1,53 @@
+import renderer from "react-test-renderer";
+import Login from "../components/Login";
+import { render, screen, fireEvent } from "@testing-library/react";
+
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+const mockStore = configureStore([thunk]);
+import configureStore from "redux-mock-store";
+
+it("renders correctly", () => {
+  const store = mockStore();
+  const tree = renderer
+    .create(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Login />
+        </BrowserRouter>
+      </Provider>
+    )
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+
+test("sign-out", async () => {
+  const store = mockStore();
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Login />
+      </BrowserRouter>
+    </Provider>
+  );
+  const signout = screen.getByTestId("signin");
+  fireEvent.click(signout);
+  expect(signout).toBeTruthy();
+});
+
+test("profile names", async () => {
+  const store = mockStore();
+  render(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Login />
+      </BrowserRouter>
+    </Provider>
+  );
+  const profileTest = screen.getAllByTestId("profiletest");
+  const signin = screen.getByTestId("signin");
+  fireEvent.click(signin);
+  fireEvent.change(profileTest);
+  expect(profileTest).toBeTruthy();
+});

@@ -1,14 +1,13 @@
 import axios from "axios";
 import {
   selectedImage,
-  
   Search,
   Success,
   Failure,
   nextPage,
   Category,
   like,
-  loading
+  loading,
 } from "../actionTypes";
 
 export const RequestSuccess = (data) => {
@@ -33,15 +32,15 @@ export const category = (data) => {
     payload: data,
   };
 };
-export const Loading=()=>{
+export const Loading = () => {
   return {
-    type:loading
-  }
-}
+    type: loading,
+  };
+};
 export const Fetch = (data) => {
   const { search, category, next } = data;
   return (dispatch) => {
-    RequestSuccess([])
+    RequestSuccess([]);
     if (search) {
       axios
         .get(
@@ -65,8 +64,7 @@ export const Fetch = (data) => {
         })
         .catch((error) => dispatch(RequestFailed(error)));
     }
-    Selected({})
-
+    Selected({});
   };
 };
 export const Selected = (data) => {
@@ -91,9 +89,9 @@ export const Next = (next) => {
   return { type: nextPage, payload: next };
 };
 
-export const Like=(data)=>{
+export const Like = (data) => {
   return {
-    type:like,
-    payload:data
-  }
-}
+    type: like,
+    payload: data,
+  };
+};

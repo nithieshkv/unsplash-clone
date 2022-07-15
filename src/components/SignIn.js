@@ -5,10 +5,8 @@ import image from "../images/image.jpg";
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const SignIn = ({ setProfile }) => {
-  const nav = useNavigate();
   const onLoginSuccess = (res) => {
     setProfile(res.profileObj);
-    // nav("/imageList");
   };
 
   const onLoginFailure = (res) => {
@@ -22,6 +20,7 @@ const SignIn = ({ setProfile }) => {
       </div>
       <div className="bg-img">
         <GoogleLogin
+          data-testid="signin"
           clientId={clientId}
           buttonText="Sign In With Google"
           onSuccess={onLoginSuccess}

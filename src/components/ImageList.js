@@ -60,7 +60,7 @@ const ImageList = ({
   const displayImages = imagelist ? (
     imagelist.map((x, index) => {
       return (
-        <div key={index}>
+        <div data-testid="like-test" key={index}>
           <div
             onClick={() => {
               Selected(x);
@@ -135,7 +135,11 @@ const ImageList = ({
               </button>
             ) : null}
 
-            <button onClick={() => next(nextPage + 1)} className="buttons next">
+            <button
+              data-testid="next-test"
+              onClick={() => next(nextPage + 1)}
+              className="buttons next"
+            >
               NEXT PAGE
             </button>
           </div>

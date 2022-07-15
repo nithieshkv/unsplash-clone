@@ -39,7 +39,7 @@ function Login() {
   }, [profile]);
   return (
     <div>
-      <div className="header-container">
+      <div data-testid="profiletest" className="header-container">
         <div>
           {profile.name ? (
             <div className="header-left">
@@ -64,7 +64,7 @@ function Login() {
           ) : null}
 
           {showlogoutButton ? (
-            <div className="signout">
+            <div data-testid="sign-out" className="signout">
               <GoogleLogout
                 clientId={clientId}
                 buttonText="Sign Out"

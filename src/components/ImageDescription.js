@@ -23,7 +23,7 @@ const ImageDescription = ({ data, liked, like }) => {
               ) : (
                 <div className="like-icon like">
                   <FavoriteBorder style={{ color: "red" }} />
-                  <p >{data.likes}</p>
+                  <p>{data.likes}</p>
                 </div>
               )}
             </div>
@@ -39,7 +39,9 @@ const ImageDescription = ({ data, liked, like }) => {
           <p>DESCRIPTION :&nbsp;{data.alt_description}</p>
         ) : null}
         {data.user?.name ? <p>SPONSOR USER NAME: {data.user?.name} </p> : null}
-        <p data-testid="likeText">TOTAL LIKES :{(liked && data.likes + 1) || data.likes}</p>
+        <p data-testid="likeText">
+          TOTAL LIKES :{(liked && data.likes + 1) || data.likes}
+        </p>
         {data.sponsorship?.sponsor?.bio ? (
           <p>BIO: {data.sponsorship?.sponsor?.bio}</p>
         ) : null}
