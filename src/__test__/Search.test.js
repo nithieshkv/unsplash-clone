@@ -18,11 +18,13 @@ test("searching the field", () => {
   const store = mockStore(data);
   render(
     <Provider store={store}>
+      <BrowserRouter>
       <Search
         Selected={mockselected}
         search={mockSearch}
         loading={mockloading}
       />
+      </BrowserRouter>
     </Provider>
   );
   const input = screen.getByPlaceholderText(/Search/i);
@@ -34,11 +36,13 @@ test("category button", async () => {
   const store = mockStore();
   render(
     <Provider store={store}>
+      <BrowserRouter>
       <Search
         Selected={mockselected}
         search={mockSearch}
         loading={mockloading}
       />
+      </BrowserRouter>
     </Provider>
   );
   const button = screen.getByText("oldest");
@@ -50,11 +54,13 @@ test("buttons", async () => {
   const store = mockStore();
   render(
     <Provider store={store}>
+      <BrowserRouter>
       <Search
         Selected={mockselected}
         search={mockSearch}
         loading={mockloading}
       />
+      </BrowserRouter>
     </Provider>
   );
   const button = screen.getAllByTestId("button");
@@ -65,11 +71,13 @@ test("toggling", async () => {
   const store = mockStore();
   render(
     <Provider store={store}>
+      <BrowserRouter>
       <Search
         Selected={mockselected}
         search={mockSearch}
         loading={mockloading}
       />
+      </BrowserRouter>
     </Provider>
   );
   const inputelement = screen.getByPlaceholderText(/Search/i);

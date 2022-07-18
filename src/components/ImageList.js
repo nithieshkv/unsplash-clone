@@ -57,8 +57,8 @@ const ImageList = ({
     setLiked(array);
   }, [imagelist]);
 
-  const displayImages = imagelist ? (
-    imagelist.map((x, index) => {
+  const displayImages = imagelist ?. 
+    map((x, index) => {
       return (
         <div data-testid="like-test" key={index}>
           <div
@@ -97,9 +97,10 @@ const ImageList = ({
         </div>
       );
     })
-  ) : (
-    <Skeleton variant="rectangular" width={210} height={118} />
-  );
+  // ) 
+  // : (
+    // <Skeleton variant="rectangular" width={210} height={118} />
+  // );
 
   return (
     <div>

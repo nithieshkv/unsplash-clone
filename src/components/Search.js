@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Fetch, Input, category, Loading, Selected } from "../actions";
-// import { loading } from "../actionTypes";
 import { useNavigate } from "react-router-dom";
 import "./Search.css";
 
@@ -23,7 +22,7 @@ const userRequest=()=>{
   }, [toggle]);
   let timer;
 useEffect(()=>{
-  timer=setTimeout(userRequest,5000)
+  timer=setTimeout(userRequest,3000)
   return ()=>clearTimeout(timer)
 },[inputValue])
   const handler = (e) => {

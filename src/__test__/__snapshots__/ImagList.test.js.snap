@@ -4,6 +4,22 @@ exports[`renders correctly 1`] = `
 Array [
   <div>
     <div
+      className="next-button"
+    >
+      <button
+        className="buttons next"
+      >
+        Current page is 
+      </button>
+      <button
+        className="buttons next"
+        data-testid="next-test"
+        onClick={[Function]}
+      >
+        NEXT PAGE
+      </button>
+    </div>
+    <div
       className=""
     >
       <div
@@ -19,17 +35,6 @@ Array [
           }
         />
       </div>
-    </div>
-    <div
-      className="next-button"
-    >
-      <button
-        className="buttons next"
-        data-testid="next-test"
-        onClick={[Function]}
-      >
-        NEXT PAGE
-      </button>
     </div>
   </div>,
   "      ",

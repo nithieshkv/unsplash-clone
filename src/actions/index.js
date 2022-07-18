@@ -46,7 +46,7 @@ export const Fetch = (data) => {
         .get(
           `${process.env.REACT_APP_SEARCH_URL}page=${
             next ? next : 1
-          }&per_page=16&query=${search}&order_by=${category}&client_id=${
+          }&per_page=50&query=${search}&order_by=${category}&client_id=${
             process.env.REACT_APP_APIKEY
           }`
         )
